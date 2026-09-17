@@ -257,7 +257,7 @@
   .report .sum b { font-family: var(--latin); font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .report .sum small { color: var(--ink-3); font-size: 13px; display: block; text-align: right; }
 
-  .pkgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; align-items: stretch; }
+  .pkgs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; align-items: stretch; }
   .pkg { border-radius: 22px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 14px; }
   .pkg .ptag { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--ink-3); }
   .pkg .ptag b { width: 28px; height: 28px; border-radius: 8px; background: var(--night); color: #F2F3F4; display: grid; place-items: center; font-family: var(--latin); font-size: 15px; letter-spacing: 0; }
@@ -613,7 +613,7 @@
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">よく選ばれる形</p>
-      <h2 id="pkg-h">3つのパッケージ。</h2>
+      <h2 id="pkg-h">4つのパッケージ。</h2>
       <p>中身は、診断のあと会社ごとに合わせます。</p>
     </div>
     <div class="pkgs">
@@ -656,6 +656,18 @@
         </ul>
         <p class="proof">比べると: 営業代行の相場は1人あたり月50〜70万円</p>
         <div class="fee"><div class="line"><span>導入</span><b>80<small>万円〜</small></b></div></div>
+      </article>
+      <article class="pkg card">
+        <div class="ptag"><b>D</b>集客の仕組み化</div>
+        <h3>測ってから出す。当たりは回数から出す。</h3>
+        <ul>
+          <li>MetaとTikTokで、届く人数を先に測る</li>
+          <li>客層ごとに媒体を分ける</li>
+          <li>売れている広告の型で、フック5本を同時に</li>
+          <li>止めどきとクーポンで、1件あたりの費用が出る</li>
+        </ul>
+        <p class="proof">実績: Reelsで広告費の3.87倍。止めどきを守れば1.9倍→2.4倍</p>
+        <div class="fee"><div class="line"><span>スタート</span><b>25<small>万円</small></b></div></div>
       </article>
     </div>
   </div>
@@ -1146,7 +1158,7 @@ window.I18N = (function () {
       "Based on 20 working days a month. The diagnosis shows, task by task, how much of this can be eliminated or automated.",
       "Из расчёта 20 рабочих дней в месяц. Диагностика покажет по каждой задаче, сколько из этого можно убрать или автоматизировать."],
     ["よく選ばれる形", "Popular packages", "Популярные пакеты"],
-    ["3つのパッケージ。", "Three packages.", "Три пакета."],
+    ["4つのパッケージ。", "Four packages.", "Четыре пакета."],
     ["中身は、診断のあと会社ごとに合わせます。", "We tailor the contents to each company after the diagnosis.", "Состав подбираем под каждую компанию после диагностики."],
     ["伺うこと 1", "Topic 1", "Тема 1"], ["伺うこと 2", "Topic 2", "Тема 2"], ["伺うこと 3", "Topic 3", "Тема 3"],
     ["伺うこと 4", "Topic 4", "Тема 4"], ["伺うこと 5", "Topic 5", "Тема 5"], ["伺うこと 6", "Topic 6", "Тема 6"],
@@ -1155,7 +1167,52 @@ window.I18N = (function () {
       "30 min · online · free. Put “Free consultation” in the subject line. Introductions through a referrer are welcome too.",
       "30 минут, онлайн, бесплатно. Укажите в теме письма «Бесплатная консультация». Можно обратиться и через того, кто нас порекомендовал."],
     ["Building the intelligence layer beneath your business.　表示価格はすべて税別です。", "Building the intelligence layer beneath your business. Prices in USD, excl. tax.", "Building the intelligence layer beneath your business. Цены в долларах США, без налогов."],
-    ["30分・オンライン・無料", "30 min · online · free", "30 минут · онлайн · бесплатно"]
+    ["30分・オンライン・無料", "30 min · online · free", "30 минут · онлайн · бесплатно"],
+    // ---- D 集客の仕組み化（2026-09-17 追加） ----
+    ["集客の仕組み化", "Customer-acquisition system", "Система привлечения клиентов"],
+    ["測ってから、出す。<br><span class=\"acc\">当たりは、回数から出す。</span>", "Measure first, then launch.<br><span class=\"acc\">Winners come from volume.</span>", "Сначала измерить, потом запускать.<br><span class=\"acc\">Победители рождаются из количества.</span>"],
+    ["市場を、広告を出す前に測る", "Measure the market before you spend", "Измерить рынок до запуска рекламы"],
+    ["MetaとTikTokの管理画面で「届く人数」を読む。費用ゼロ", "Read audience sizes in the Meta and TikTok ad managers. Costs nothing", "Считываем охват в кабинетах Meta и TikTok. Бесплатно"],
+    ["客層ごとに媒体を分ける", "Match each audience to its channel", "Каждой аудитории — свой канал"],
+    ["言語・年齢・購買力で、届く面が変わる", "Language, age and spending power decide where they are", "Язык, возраст и платёжеспособность решают, где их искать"],
+    ["「売れている広告の型」で作る", "Build on the pattern of ads that sell", "Строим по шаблону работающей рекламы"],
+    ["見える証拠→痛み→仕組み→数字→反論→オファー→CTA", "Visible proof → pain → mechanism → numbers → objection → offer → one CTA", "Наглядное доказательство → боль → механизм → цифры → возражение → оффер → один призыв"],
+    ["1つの本体に、フックを5本", "One body, five hooks", "Одно тело, пять хуков"],
+    ["同時に出し、3〜4日で悪いものを止める", "Launch together; kill the losers within 3–4 days", "Запускаем вместе; слабые отключаем через 3–4 дня"],
+    ["止めどきを決める", "Decide when to stop", "Решаем, когда останавливать"],
+    ["数字が落ちたら止め、生き残った1本は変えない", "Stop when numbers drop; never touch the survivor", "Останавливаем при падении цифр; победителя не трогаем"],
+    ["クーポンとQRで、来店まで測る", "Coupons and QR codes track all the way to the visit", "Купоны и QR-коды доводят учёт до визита"],
+    ["媒体別・クリエイター別の「1件あたりの費用」が出る", "Cost per result by channel and by creator", "Стоимость результата по каналу и по автору"],
+    ["実績: Reelsで広告費1円あたり3.87倍。止めどきを守れば1.9倍→2.4倍（日本向けEC・2026年8月）", "Track record: Reels returned 3.87× ad spend; stopping on time would have lifted 1.9× to 2.4× (Japan e-commerce, Aug 2026)", "Результат: Reels вернули 3,87× бюджета; вовремя остановив, подняли бы 1,9× до 2,4× (e-commerce для Японии, август 2026)"],
+    ["2週間テストの結果（表示例）", "Two-week test — sample view", "Двухнедельный тест — пример"],
+    ["フック", "Hook", "Хук"],
+    ["1件あたり", "Per result", "За результат"],
+    ["判断", "Decision", "Решение"],
+    ["見える証拠（水が玉になる）", "Visible proof (water beads up)", "Наглядное доказательство (вода собирается в капли)"],
+    ["痛み（雨の日、前が見えない）", "Pain (can’t see in the rain)", "Боль (в дождь ничего не видно)"],
+    ["否定（洗車ではない）", "Negation (this is not a car wash)", "Отрицание (это не мойка)"],
+    ["割引だけ", "Discount only", "Только скидка"],
+    ["ブランド一行", "Brand one-liner", "Одна строка о бренде"],
+    ["広げる", "Scale", "Масштабировать"],
+    ["様子見", "Watch", "Наблюдать"],
+    ["止める", "Stop", "Остановить"],
+    ["スタート", "Start", "Старт"],
+    ["4週間・設計と2週間テスト", "4 weeks: design + a 2-week test", "4 недели: проектирование + 2-недельный тест"],
+    ["運用", "Operation", "Ведение"],
+    ["週1の調整・月次レポート", "Weekly tuning, monthly report", "Еженедельная настройка, месячный отчёт"],
+    ["クリエイター投稿", "Creator post", "Пост автора"],
+    ["選定・制作・広告化", "Selection, production, ads", "Подбор, производство, реклама"],
+    ["25<small>万円</small>", "$1,700", "$1 700"],
+    ["5<small>万円／本</small>", "$400<small>/post</small>", "$400<small>/пост</small>"],
+    ["¥190", "$1.2", "$1,2"],
+    ["¥250", "$1.6", "$1,6"],
+    ["¥450", "$2.9", "$2,9"],
+    ["¥940", "$6.1", "$6,1"],
+    ["測ってから出す。当たりは回数から出す。", "Measure first, then launch. Winners come from volume.", "Сначала измерить, потом запускать. Победители рождаются из количества."],
+    ["MetaとTikTokで、届く人数を先に測る", "Measure your reach on Meta and TikTok first", "Сначала измеряем охват в Meta и TikTok"],
+    ["売れている広告の型で、フック5本を同時に", "Five hooks at once, built on the pattern of ads that sell", "Пять хуков сразу — по шаблону работающей рекламы"],
+    ["止めどきとクーポンで、1件あたりの費用が出る", "Stop rules and coupons give you cost per result", "Правила остановки и купоны дают стоимость результата"],
+    ["実績: Reelsで広告費の3.87倍。止めどきを守れば1.9倍→2.4倍", "Track record: Reels returned 3.87× ad spend; stopping on time lifts 1.9× to 2.4×", "Результат: Reels вернули 3,87× бюджета; вовремя остановив — с 1,9× до 2,4×"],
   ];
 
   var SUBJECT = { ja: "無料相談の申し込み", en: "Free consultation", ru: "Бесплатная консультация" };
